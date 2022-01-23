@@ -1,0 +1,59 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(../image/MicrosoftTeams-image.png);
+    background-size: cover;
+
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 900px;
+    flex-wrap: wrap;
+}
+
+section .box {
+    height: 100px;
+    width: 100px;
+    background: rgb(173, 5, 39);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    color: white;
+    border: dashed white 2px;
+    border-radius: 10px;
+    position: relative;
+    
+    
+}
+
+section .box.active {
+    background: rgb(32, 102, 32);
+    transform: scale(1.1);
+}
+
+section .box .image {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+}
+
+section .box.active .image {
+    opacity: 1;
+}
